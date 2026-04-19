@@ -4,6 +4,12 @@ Software engineer. Three-plus years shipping across any stack, product, or phase
 
 The five pinned repos below are clean-room reference scaffolds extracted from a private agentic ecosystem I've been developing since April 2026. Each one encodes a pattern worth reusing; each ships with an integrity-check script, a claim-evidence mapping, and a green CI pipeline.
 
+## Now
+
+- Extending the `claude-code-agent-skills-framework` with more WHY-tagged rules as frontier Claude / Sonnet / Opus versions ship — the audit is the work
+- Writing a long-form post on the rule-obsolescence audit pattern
+- Building the next internal agentic tool at work (QA → product → engineering feedback loop)
+
 ## What I build with
 
 - **Claude Code** — skill design, hook configuration, multi-skill orchestration, sub-agent fan-out, rule-obsolescence audit discipline
@@ -31,14 +37,38 @@ HANDOVER + SYNC inter-repo protocol for multi-agent AI systems. Specification + 
 
 ## How the five repos fit together
 
-The private ecosystem that produced these extracts has four roles:
+The private ecosystem that produced these extracts has four roles. `claude-code-mcp-qa-automation` is the odd one out — extracted from a separate internal-tooling track (production QA agents at work), not from the coaching ecosystem.
 
-- **Partner** — the day-to-day coaching / execution surface (`claude-code-agent-skills-framework` is its public shape)
-- **Observer** — captures session narratives into long-form chronicles and an atomic wiki (`llm-rag-knowledge-graph` is its public shape)
-- **Publisher** — renders public artifacts from captured sessions (`nextjs-16-mdx-research-publisher` is its public shape)
-- **Commons** — the inter-repo protocol layer (`claude-multi-agent-protocol` is its public shape)
+```
+                   ┌──────────────────────────────────┐
+                   │       Private ecosystem          │
+                   │  (four roles, four repos)        │
+                   └──────────────────────────────────┘
+                                   │
+         ┌──────────┬──────────────┼──────────────┬──────────┐
+         ▼          ▼              ▼              ▼          │
+     Partner    Observer       Publisher       Commons       │
+   (coaching  (chronicles    (static site    (inter-repo     │
+    + rules    + wiki)        rendering)      protocol)      │
+    + skills)     │              │               │           │
+         │        │              │               │           │
+         ▼        ▼              ▼               ▼           │
+ claude-code-  llm-rag-    nextjs-16-mdx-  claude-multi-     │
+ agent-skills- knowledge-  research-       agent-protocol    │
+ framework    graph        publisher                         │
+                                                             │
+                                                             ▼
+                                           ┌──────────────────────────────┐
+                                           │  Separate internal-tooling   │
+                                           │  track (work: QA automation) │
+                                           └──────────────┬───────────────┘
+                                                          │
+                                                          ▼
+                                            claude-code-mcp-qa-automation
+                                            (sanitised clean-room extract)
+```
 
-`claude-code-mcp-qa-automation` is extracted from a separate internal tooling track — production QA agents at work. The public version is clean-room: sanitised skills, synthetic fixtures, identical orchestration shape.
+Each public repo is the shape — not a full copy — of what runs privately. The pattern travels; the project-specific content stays private.
 
 ## How each repo is bulletproof
 
