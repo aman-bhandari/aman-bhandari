@@ -2,7 +2,7 @@
 
 Software engineer. Three-plus years shipping across any stack, product, or phase of the SDLC. Primary workflow is Claude Code + MCP — the agents build the internal tooling my team consumes as daily work product.
 
-The five pinned repos below are clean-room reference scaffolds extracted from a private agentic ecosystem I've been developing since April 2026. Each one encodes a pattern worth reusing; each ships with an integrity-check script, a claim-evidence mapping, and a green CI pipeline.
+The five pinned repos below are clean-room extracts from a private agentic ecosystem. Each one encodes a pattern worth reusing; each ships with an integrity-check script, a claim-evidence mapping, and a green CI pipeline.
 
 ## What I build with
 
