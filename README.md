@@ -85,6 +85,16 @@ Every repo enforces the same pre-push contract:
 
 The `scripts/integrity-check.sh` in each repo runs Gates 0, 1, 4, 5 + artifact-specific verification locally before any push. CI runs the same script on every commit.
 
+## Pre-2022 Node.js foundation
+
+Before I joined my current team in 2022, I was self-taught on Node.js backend development. Three archived repos from that period are kept public as evidence of sustained iterative work — not current standards, but real commit history across multiple weeks each:
+
+- [`e-commerce-api`](https://github.com/aman-bhandari/e-commerce-api) — 39 commits, Sep-Oct 2022. Products / reviews / orders / role-based permissions. Express + Mongoose + JWT (HTTP-only cookies) + Helmet + rate-limit + mongo-sanitize.
+- [`job-search-api`](https://github.com/aman-bhandari/job-search-api) — 19 commits, Sep-Nov 2022. Job tracker with Swagger docs and per-user scoping. Express + Mongoose + JWT + Joi + Helmet.
+- [`student-management-api`](https://github.com/aman-bhandari/student-management-api) — 25 commits, Sep-Oct 2022. Admin CRUD with an append-only audit-log route. Express + Mongoose + JWT + validator.
+
+These are archived and unmaintained. They cover the 2019-2022 self-taught gap and show the Node.js / Express / MongoDB muscle the current Python-and-Claude-Code work builds on.
+
 ## Contact
 
 `bhandari.aman0101@gmail.com`
